@@ -35,6 +35,7 @@ func TestMain(m *testing.M) {
 
 	context := func(s *godog.Suite) {
 		ObjectFeatureContext(s)
+		ObjectMultipartFeatureContext(s)
 	}
 	options := godog.Options{
 		Format: "pretty",
