@@ -28,6 +28,7 @@ help:
 	@echo "  unit                    to run unit tests"
 	@echo "  integration             to run integration tests"
 	@echo "  performance             to run performance tests"
+	@echo "  s3test-integ            to run integration s3test"
 	@echo "  verify                  to verify tests"
 	@echo "  lint                    to lint the SDK"
 	@echo "  vet                     to vet the SDK"
@@ -107,6 +108,11 @@ s3crypto-integ:
 cleanup-integ-buckets:
 	@echo "Cleaning up SDK integraiton resources"
 	go run -tags "integration" ./awstesting/cmd/bucket_cleanup/main.go "aws-sdk-go-integration"
+
+s3api-integ:
+	@echo "Run s3api integration test"
+	pushd "./s3test"; go test; popd
+	@echo "Done"
 
 ###################
 # Sandbox Testing #

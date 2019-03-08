@@ -1,0 +1,12 @@
+# Test configurations
+
+bucket_name: aws-s3
+
+region: pek3b
+endpoint: s3.pek3b.qingstor.com
+disable_ssl: true
+
+access_key_id: ACCESS_KEY_ID
+secret_access_key: SECRET_ACCESS_KEY
+
+concurrency: 1
